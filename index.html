@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>DashBoard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+     <!--Titulo no canto data e hora-->
+     <header id="header">
+        <h1>DashBoard</h1>
+        <button id="date">05/06/2021</button>
+    </header>
+    <!--Card que manipula o espaço entre os conteúdos-->
+    <div id="content-body">
+        <!--menu lateral - aside -->
+        <aside id="aside-menu">
+            <header id="aside-menu-header">
+                <h2><img id="image-header-menu" src="./assets/line-chart.png" alt=""> Base</h2>
+            </header>
+            <nav>
+                <a href="#" class="aside-menu-link">
+                    <img class="image-menu" src="./assets/user-menu-female.png" alt=""> Dashboard
+                </a>
+                <a href="#" class="aside-menu-link">
+                    <img class="image-menu" src="./assets/cash-register.png" alt=""> Análises
+                </a>
+                <a href="#" class="aside-menu-link">
+                    <img class="image-menu" src="./assets/invoice.png" alt=""> Fatura
+                </a>
+                <a href="#" class="aside-menu-link">
+                    <img class="image-menu" src="./assets/transaction-list.png" alt=""> Cédulas
+                </a>
+                <a href="#" class="aside-menu-link">
+                    <img class="image-menu" src="./assets/calendar.png" alt=""> Calendário
+                </a>
+                <a href="#" class="aside-menu-link">
+                    <img class="image-menu" src="./assets/messaging-.png" alt=""> Mensagens
+                </a>
+                <a href="#" class="aside-menu-link">
+                    <img class="image-menu" src="./assets/appointment-reminders.png" alt=""> Notificações
+                </a>
+                <a href="#" class="aside-menu-link">
+                    <img class="image-menu" src="./assets/administrative-tools.png" alt=""> Configurações
+                </a>
+            </nav>
+        </aside>
+        <div id="content-statistics">
+            <!--sequencia de cards com estatistica de itens -->
+            <div id="product-statistics">
+                <div class="box-product">
+                    <!--Icones-->
+                    <span>
+                        <img src="./assets/bookmark.png" alt="" class="image-card">
+                    </span>
+                    <div class="statistic-data">
+                        <h3>178+</h3>
+                        <p>Produtos salvos</p>
+                    </div>
+                </div>
+                <div class="box-product">
+                    <!--Icones-->
+                    <span>
+                        <img src="./assets/shopping-bag.png" alt="" class="image-card">
+                    </span>
+                    <div class="statistic-data">
+                        <h3>20+</h3>
+                        <p>Produtos em Stock</p>
+                    </div>
+                </div>
+                <div class="box-product">
+                    <!--Icones-->
+                    <span>
+                        <img src="./assets/shopping-cart-loaded.png" alt="" class="image-card">
+                    </span>
+                    <div class="statistic-data">
+                        <h3>190+</h3>
+                        <p>Produtos de Vendas</p>
+                    </div>
+                </div>
+                <div class="box-product">
+                    <!--Icones-->
+                    <span>
+                        <img src="./assets/briefcase.png" alt="" class="image-card">
+                    </span>
+                    <div class="statistic-data">
+                        <h3>12+</h3>
+                        <p>Candidatura de Trabalho</p>
+                    </div>
+                </div>
+            </div>
+            <!--gráfico principal (2)- main da página -->
+            <main id="main-report">
+                <div class="card-report" id="card-graphic">
+                    <h2>Relatório</h2>
+                    <div>
+                        <img id="image-report" src="./assets/graphic.png" alt="">
+                    </div>
+                </div>
+                <div class="card-report" id="card-analitic">
+                    <h2>Análise</h2>
+                    <div>
+                        <img id="image-analitic" src="./assets/graphic-circle.jpg" alt="">
+                    </div>
+                    <div id="content-analitic-text">
+                        <p class="analitic-graphic-text"><div id="blue"></div>- Lucro, </p>
+                        <p class="analitic-graphic-text"><div id="pink"></div>- Distribuição,</p>
+                        <p class="analitic-graphic-text"><div id="green"></div>- Retorno,</p>
+                        <p class="analitic-graphic-text"><div id="orange"></div>- Ações</p>
+                    </div>
+                </div>
+            </main>
+            <div id="table-advertisement">
+                <!-- tabela com dados mais especificos do produto-->
+                <div id="table-header">
+                    <div id="table-header-align"> 
+                        <h2>Recent Order</h2>
+                        <button id="open-modal-form" onclick="Modal.open()">New</button>
+                    </div>
+                    <table id="table-product">        
+                        <thead>
+                            <tr>
+                                <th>Monitorando</th>
+                                <th>Nome do produto</th>
+                                <th>Preço</th>
+                                <th>Total no Stock</th>
+                                <th>Total Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                        </tbody>
+                    </table>
+                </div>
+                <!--propaganda de prosutos ao lado da tabela -->
+                <div id="advertisement-product">
+                    <h2>Produtos mais Vendidos</h2>
+                    <div class="card-product">
+                        <img class="advertisement-product-image" src="./assets/pc.png" alt="">
+                        <div>
+                            <p>PC gamer completo Intel I7 placa Asus</p>
+                            <img class="star-product-icon" src="./assets/star.png" alt="">
+                            <img class="star-product-icon" src="./assets/star.png" alt="">
+                            <p>R$ 3,000.00</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-product">
+                        <img class="advertisement-product-image" src="./assets/monitor.png" alt="">
+                        <div>
+                            <p>Monitor LED 4k 1900x1100</p>
+                            <img class="star-product-icon" src="./assets/star.png" alt=""> 
+                            <img class="star-product-icon" src="./assets/star.png" alt="">
+                            <p>R$ 350,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class="modal-display">
+        <div class="modal">
+            <h2>Cadastar novo registro de venda</h2>
+            <form action="" id="form" onsubmit="Form.submitData(event)">
+                <label for="name" class="sr-only">Nome do produto</label>
+                <input class="input-group" type="text" name="name" id="name" required placeholder="Digite o nome do produto" title="Digite o nome do Produto">
+
+                <label for="amount" class="sr-only">Preço</label>
+                <input class="input-group" type="number" name="amount" id="amount" required placeholder="0,00" step="0.01" title="Digite o preço do produto(unidade)">
+
+                <label for="quantity" class="sr-only">Quantidade no Stock</label>
+                <input class="input-group" type="number" name="quantity" id="quantity" required placeholder="0" title="Digite a quantidade guardada em Stock">
+
+                <label for="total-amount" class="sr-only">Total Resultado</label>
+                <input class="input-group" type="number" name="total-amount" id="total-amount" placeholder="R$ 1.000,00" title="Digite  o preço total dos produtos">
+
+                <div id="buttons">
+                    <button class="modal-button" id="save-button">Salvar</button>
+                    <button class="modal-button" id="cancel-button" onclick="Modal.close()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

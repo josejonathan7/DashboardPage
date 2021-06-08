@@ -1,0 +1,393 @@
+:root{
+    --white: rgba(252, 252, 253, 0.644);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 1rem;
+    font-family: Open-Sans-Condensed, sans-serif;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+
+#content-body{
+    display: flex;
+    height: 43.75rem;
+}
+
+/*==============Cabeçalhos==============*/
+#header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.9375rem;
+}
+
+#header #date{
+    background-color: var(--white);
+    padding: 0.3125rem;
+    border-radius: 0.25rem;
+    margin-right: 2%;
+    opacity: 0.3;
+}
+
+#header #date:hover{
+    box-shadow: 0 0.125rem 0.25rem 0.125rem rgba(0, 0, 0, 0.7);
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+
+h1{
+    margin-left: 20%;
+}
+
+aside header#aside-menu-header h2{
+    margin-bottom: 3.125rem;
+    margin-top: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 8%;
+}
+
+div#table-header h2{
+    margin: 0.9375rem 0;
+}
+
+div#table-header div#table-header-align{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*==============Aside / menu lateral==============*/
+
+aside#aside-menu{
+    width: 20%;
+    background-color: var(--white);
+    display: block;
+    height: 130%;
+    border-radius: 0.5rem;
+    margin-left: 1%;
+    text-align: center;
+    position: relative;
+    top: -1.875rem;
+    border: 0.0625rem solid black;
+}
+
+aside .aside-menu-link,
+aside #aside-menu-header{
+    display: block;
+    margin: 0.9375rem 0 0.9375rem 0;
+}
+
+header img#image-header-menu{
+    width: 50%;
+}
+
+aside .aside-menu-link .image-menu{
+    width: 35%;
+}
+
+aside nav a.aside-menu-link{
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+aside nav .aside-menu-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5%;
+}
+
+aside nav a.aside-menu-link:hover{
+    box-shadow: 0rem 0.1875rem 0.625rem 0.1875rem black;
+    transition: 0.5s;
+}
+
+/*==============cards com dados estatiscos de consumo produtos==============*/
+div#product-statistics{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: -5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*position: relative;
+    top: -50px;*/
+}
+
+div#product-statistics:first-child{
+    margin-left: 2%;
+}
+
+div#product-statistics .box-product{
+    padding: 0.9375rem;
+    background-color: var(--white);
+    border: 0.0625rem solid black;
+    width: 85%;
+    height: 7.5rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+}
+
+.box-product span img.image-card{
+    width: 80%;
+}
+
+/*==============cards com os relatórios principais==============*/
+main#main-report{
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 5.3125rem;
+    margin-left: 2%;
+
+}
+
+main .card-report{
+    background-color: var(--white);
+    border: 0.0625rem solid black;
+    height: 21.875rem;
+    border-radius: 0.5rem;
+}
+
+main .card-report#card-graphic{
+    width: 55%;
+    padding: 1.875rem 0px 0.9375rem 1.875rem;
+}
+
+div img#image-report{
+    position: relative;
+    top: -6.875rem;
+    left: 3.125rem;
+}
+
+main .card-report#card-analitic{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem;
+}
+
+div img#image-analitic{
+    width: 100%;
+    margin: 6% 0;
+}
+
+
+
+/*==============Tabela e propaganda==============*/
+div#content-statistics #table-advertisement{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+
+
+/*==============Tabela==============*/
+div#table-advertisement div#table-header{
+    padding: 1.25rem;
+    background-color: var(--white);
+    border: 0.0625rem solid black;
+    width: 58%;
+    border-radius: 0.5rem;
+    height: 100%;
+}
+
+#table-header #table-product{
+    width: 100%;
+    
+}
+
+table#table-product tbody tr,
+table#table-product thead tr{
+    margin: 0.9375rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+div#table-header-align button#open-modal-form{
+ 
+    height: 1.875rem;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--white);
+    border: none;
+    opacity: 0.3;
+    
+}
+
+div#table-header-align button#open-modal-form:hover{
+    box-shadow: 0 0.125rem 0.1875rem 0.125rem rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    padding: 0.375rem;
+}
+
+/*==============propaganda==============*/
+div#table-advertisement div#advertisement-product{
+    padding: 0.625rem;
+    background-color: var(--white);
+    width: 37%;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid black;
+}
+
+div#advertisement-product div img.advertisement-product-image{
+    width: 25%;
+    margin-top: 7%;
+}
+
+div#advertisement-product div.card-product{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3%;
+}
+
+div img.star-product-icon{
+    width: 8%;
+}
+
+/*==============Modal==============*/
+div.modal-display{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+div.modal-display.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+ div.modal{
+    background-color: #F0F2f5;
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.modal form#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+label.sr-only{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+input{
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+form#form div#buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button.modal-button{
+    padding: 15px;
+    width: 95%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+button#save-button{
+    background-color: lightgreen;
+}
+
+button#save-button:hover{
+    background-color: lime;
+    box-shadow: 0 4px 5px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s;
+}
+
+button#cancel-button{
+    background-color: lightcoral;
+}
+
+button#cancel-button:hover{
+    background-color: red;
+    box-shadow: 0 4px 5px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s;
+}
+
+/*==============Utilidades==============*/
+div#content-analitic-text{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div#blue{
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background-color: blue;
+    margin-right: 1%;;
+}
+
+div#pink{
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background-color: palevioletred;
+    margin: 0 1%;
+}
+
+div#green{
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background-color: greenyellow;
+    margin: 0 1%;
+}
+
+div#orange{
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background-color: orange;
+    margin: 0 1%;
+}
+
