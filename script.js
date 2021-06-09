@@ -43,16 +43,13 @@ const DOM = {
     },
     //receber os dados do html
     innerHTMLdate(operations, index){
-        const price = Utils.formatCash(operations.price)
-        const amount = Utils.formatCash(operations.amount)
-        const quantities = Utils.formatCash(operations.quantities)
 
         const html = `
             <td>${index+1}</td>
-            <td>${Operations.name}</td>
-            <td>${price}</td>
-            <td>${quantities}</td>
-            <td>${amount}</td>
+            <td>${operations.name}</td>
+            <td>${operations.price}</td>
+            <td>${operations.quantities}</td>
+            <td>${operations.amount}</td>
         `
         return html
     },
@@ -86,16 +83,16 @@ const Form = {
 
     },
     formatData(){
-        let {name, price, quantitites, amount} = Form.getValues()
+        let {name, price, quantities, amount} = Form.getValues()
 
         price = Utils.formatCash(price)
         amount = Utils.formatCash(amount)
-        quantitites = Utils.formatNumber(quantitites)
+        quantities = Utils.formatNumber(quantities)
 
         return{
             name: name,
             price: price,
-            quantitites: quantitites,
+            quantities: quantities,
             amount: amount
         }
     },
@@ -140,8 +137,7 @@ const Utils = {
         return moneyFormated
     },
     formatNumber(value){
-        let valueFormated = String(value)
-        valueFormated.replace("-", "")
+        let valueFormated = String(value).replace("-", "")
 
         valueFormated = Number(valueFormated)
 
