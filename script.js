@@ -27,7 +27,7 @@ const Operations = {
         Operations.all.splice(index, 1)
 
         App.reload()
-    }
+    },
 }
     
 const DOM = {
@@ -50,6 +50,7 @@ const DOM = {
             <td>${operations.price}</td>
             <td>${operations.quantities}</td>
             <td>${operations.amount}</td>
+            <td><img src="./assets/remove-document.png" alt="" id="image-remove" onclick="Operations.removeData(${index})"></td>
         `
         return html
     },
@@ -80,7 +81,6 @@ const Form = {
         if(name.trim() === "" || price.trim() == "" || quantities.trim() == "" || amount.trim() == ""){
             throw new Error("Por favor preencha todos os campos")
         }
-
     },
     formatData(){
         let {name, price, quantities, amount} = Form.getValues()
@@ -112,7 +112,7 @@ const Form = {
             //pegando o valor dos dados e validando
             Form.validateData()
             //formatando os dados após a validação
-            const dados = Form.formatData()
+            const dados = Form.formatData();
             //salvando os dados
             Form.saveData(dados)
             //método para limpar os dados
@@ -124,7 +124,6 @@ const Form = {
         }
     }
 }
-
 
 const Utils = {
     formatCash(value){
@@ -138,16 +137,82 @@ const Utils = {
     },
     formatNumber(value){
         let valueFormated = String(value).replace("-", "")
+        let valueFinal
 
-        valueFormated = Number(valueFormated)
+        valueFinal = Number(valueFormated)
 
-        return valueFormated
+        return valueFinal
+    },
+    formatDate(){
+        const dates = new Date()
+        let date = String(dates).split(" ");
+        const month = [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"
+        ]
+
+       switch (date[1]) {
+           case "Jan":
+               date[1] = month[0]
+               break;
+            case "Feb":
+                date[1] = month[1]
+                break;
+           case "Mar":
+               date[1] = month[2]
+               break;
+           case "Apr":
+               date[1] = month[3]
+               break;
+           case "May":
+               date[1] = month[4]
+               break;
+           case "Jun":
+               date[1] = month[5]
+               break;
+           case "Jul":
+               date[1] = month[6]
+               break;
+           case "Aug":
+               date[1] = month[7]
+               break;
+           case "Sep":
+               date[1] = month[8]
+               break;
+           case "Oct":
+               date[1] = month[9]
+               break;
+           case "Nov":
+               date[1] = month[10]
+               break;
+            case "Dec":
+               date[1] = month[11]
+               break;
+           default:
+               break;
+       }
+
+        let finalDate = `${date[4]}, ${date[2]}/${date[1]}/${date[3]}`
+
+        return  document.querySelector('button#date').innerHTML = finalDate
     }
 }
 
 //anexar o html com a inserção via JS
 const App = {
     init(){
+        Utils.formatDate()
+
         Operations.all.forEach((operations, index) => {
             DOM.returnDataTable(operations, index)
         })
