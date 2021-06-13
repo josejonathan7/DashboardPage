@@ -114,6 +114,11 @@ aside nav a.aside-menu-link:hover{
     transition: 0.5s;
 }
 
+aside nav a.aside-menu-link.opacity{
+    opacity: 0.6;
+    color: black;
+}
+
 /*==============cards com dados estatiscos de consumo produtos==============*/
 div#product-statistics{
     width: 100%;
