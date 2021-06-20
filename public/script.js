@@ -1,3 +1,5 @@
+const Data = require('../src/models/DataModel')
+
 const Modal = {
     open(){
         document.querySelector('.modal-display').classList.add('active')
@@ -7,16 +9,17 @@ const Modal = {
     }
 }
 
-const Storage = {
+/*const Storage = {
     get(){
-        return JSON.parse(localStorage.getItem("Dashboard-page: Operations")) || []
+        return JSON.parse(Data) || []
     },
     set(newRegister){
-        localStorage.setItem("Dashboard-page: Operations", JSON.stringify(newRegister))
+        const newData = JSON.stringify(newRegister)
+        return newData
     }
-}
+}*/
 
-const Operations = {
+/*const Operations = {
     all: Storage.get(),
     addData(newData){
         Operations.all.push(newData)
@@ -28,9 +31,9 @@ const Operations = {
 
         App.reload()
     },
-}
+}*/
     
-const DOM = {
+/*const DOM = {
     tableContainer: document.querySelector('#table-product tbody'),
     //enviar os dados para a tabela
     returnDataTable(operations, index){
@@ -57,10 +60,10 @@ const DOM = {
     clearData(){
         DOM.tableContainer.innerHTML = ""
     }
-}
+}*/
 
 //anexar os dados enviados pelo formulario com o js
-const Form = {
+/*const Form = {
     //anexar e receber os dados/campos do formulario com o js
     name: document.querySelector('#form input#name'),
     price: document.querySelector('#form input#amount'),
@@ -123,9 +126,9 @@ const Form = {
             alert(error.message)
         }
     }
-}
+}*/
 
-const Utils = {
+/*const Utils = {
     formatCash(value){
         let moneyFormated = value
         moneyFormated = Number(moneyFormated).toLocaleString("pt-br", {
@@ -206,10 +209,10 @@ const Utils = {
 
         return  document.querySelector('button#date').innerHTML = finalDate
     }
-}
+}*/
 
 //anexar o html com a inserção via JS
-const App = {
+/*const App = {
     init(){
         Utils.formatDate()
 
@@ -223,6 +226,8 @@ const App = {
         DOM.clearData()
         App.init()
     }
-}
+}*/
 
-App.init()
+
+
+module.exports = Storage

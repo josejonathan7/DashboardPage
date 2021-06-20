@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/public/style.css">
     
 </head>
 <body>
@@ -19,32 +20,32 @@
         <!--menu lateral - aside -->
         <aside id="aside-menu">
             <header id="aside-menu-header">
-                <h2><img id="image-header-menu" src="./assets/line-chart.png" alt=""> Base</h2>
+                <h2><img id="image-header-menu" src="/assets/line-chart.png" alt=""> Base</h2>
             </header>
             <nav>
                 <a href="#" class="aside-menu-link">
-                    <img class="image-menu" src="./assets/user-menu-female.png" alt=""> Dashboard
+                    <img class="image-menu" src="/assets/user-menu-female.png" alt=""> Dashboard
                 </a>
                 <a href="#" class="aside-menu-link opacity">
-                    <img class="image-menu" src="./assets/cash-register.png" alt=""> Análises
+                    <img class="image-menu" src="/assets/cash-register.png" alt=""> Análises
                 </a>
                 <a href="#" class="aside-menu-link opacity">
-                    <img class="image-menu" src="./assets/invoice.png" alt=""> Fatura
+                    <img class="image-menu" src="/assets/invoice.png" alt=""> Fatura
                 </a>
                 <a href="#" class="aside-menu-link opacity">
-                    <img class="image-menu" src="./assets/transaction-list.png" alt=""> Cédulas
+                    <img class="image-menu" src="/assets/transaction-list.png" alt=""> Cédulas
                 </a>
                 <a href="#" class="aside-menu-link opacity">
-                    <img class="image-menu" src="./assets/calendar.png" alt=""> Calendário
+                    <img class="image-menu" src="/assets/calendar.png" alt=""> Calendário
                 </a>
                 <a href="#" class="aside-menu-link opacity">
-                    <img class="image-menu" src="./assets/messaging-.png" alt=""> Mensagens
+                    <img class="image-menu" src="/assets/messaging-.png" alt=""> Mensagens
                 </a>
                 <a href="#" class="aside-menu-link opacity">
-                    <img class="image-menu" src="./assets/appointment-reminders.png" alt=""> Notificações
+                    <img class="image-menu" src="/assets/appointment-reminders.png" alt=""> Notificações
                 </a>
                 <a href="#" class="aside-menu-link opacity">
-                    <img class="image-menu" src="./assets/administrative-tools.png" alt=""> Configurações
+                    <img class="image-menu" src="/assets/administrative-tools.png" alt=""> Configurações
                 </a>
             </nav>
         </aside>
@@ -54,7 +55,7 @@
                 <div class="box-product">
                     <!--Icones-->
                     <span>
-                        <img src="./assets/bookmark.png" alt="" class="image-card">
+                        <img src="/assets/bookmark.png" alt="" class="image-card">
                     </span>
                     <div class="statistic-data">
                         <h3>178+</h3>
@@ -64,7 +65,7 @@
                 <div class="box-product">
                     <!--Icones-->
                     <span>
-                        <img src="./assets/shopping-bag.png" alt="" class="image-card">
+                        <img src="/assets/shopping-bag.png" alt="" class="image-card">
                     </span>
                     <div class="statistic-data">
                         <h3>20+</h3>
@@ -74,7 +75,7 @@
                 <div class="box-product">
                     <!--Icones-->
                     <span>
-                        <img src="./assets/shopping-cart-loaded.png" alt="" class="image-card">
+                        <img src="/assets/shopping-cart-loaded.png" alt="" class="image-card">
                     </span>
                     <div class="statistic-data">
                         <h3>190+</h3>
@@ -84,7 +85,7 @@
                 <div class="box-product">
                     <!--Icones-->
                     <span>
-                        <img src="./assets/briefcase.png" alt="" class="image-card">
+                        <img src="/assets/briefcase.png" alt="" class="image-card">
                     </span>
                     <div class="statistic-data">
                         <h3>12+</h3>
@@ -97,13 +98,13 @@
                 <div class="card-report" id="card-graphic">
                     <h2>Relatório</h2>
                     <div>
-                        <img id="image-report" src="./assets/graphic.png" alt="">
+                        <img id="image-report" src="/assets/graphic.png" alt="">
                     </div>
                 </div>
                 <div class="card-report" id="card-analitic">
                     <h2>Análise</h2>
                     <div>
-                        <img id="image-analitic" src="./assets/graphic-circle.jpg" alt="">
+                        <img id="image-analitic" src="/assets/graphic-circle.jpg" alt="">
                     </div>
                     <div id="content-analitic-text">
                         <p class="analitic-graphic-text"><div id="blue"></div>- Lucro, </p>
@@ -132,7 +133,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                           
+                           <% data.forEach(data => {%>
+                               <tr>
+                                   <td><%= data.id %></td>
+                                   <td><%= data.name %></td>
+                                   <td><%= data.price %></td>
+                                   <td><%= data.quantities %></td>
+                                   <td><%= data.amount %></td>
+                                   <td><button form="form-delete"><img src="/assets/remove-document.png" alt="" id="image-remove"></button></td>
+                               </tr>                   
+                           <%});  %> 
                         </tbody>
                     </table>
                 </div>
@@ -140,24 +150,24 @@
                 <div id="advertisement-product">
                     <h2>Produtos mais Vendidos</h2>
                     <div class="card-product">
-                        <img class="advertisement-product-image" src="./assets/pc.png" alt="">
+                        <img class="advertisement-product-image" src="/assets/pc.png" alt="">
                         <div>
                             <p>PC gamer completo Intel I7 placa Asus</p>
-                            <img class="star-product-icon" src="./assets/star.png" alt="">
-                            <img class="star-product-icon" src="./assets/star.png" alt="">
-                            <img class="star-product-icon" src="./assets/star.png" alt="">
-                            <img class="star-product-icon" src="./assets/star.png" alt="">
+                            <img class="star-product-icon" src="/assets/star.png" alt="">
+                            <img class="star-product-icon" src="/assets/star.png" alt="">
+                            <img class="star-product-icon" src="/assets/star.png" alt="">
+                            <img class="star-product-icon" src="/assets/star.png" alt="">
                             <p>R$ 3,000.00</p>
                         </div>
                     </div>
                     <hr>
                     <div class="card-product">
-                        <img class="advertisement-product-image" src="./assets/monitor.png" alt="">
+                        <img class="advertisement-product-image" src="/assets/monitor.png" alt="">
                         <div>
                             <p>Monitor LED 4k 1900x1100</p>
-                            <img class="star-product-icon" src="./assets/star.png" alt=""> 
-                            <img class="star-product-icon" src="./assets/star.png" alt="">
-                            <img class="star-product-icon" src="./assets/star.png" alt="">
+                            <img class="star-product-icon" src="/assets/star.png" alt=""> 
+                            <img class="star-product-icon" src="/assets/star.png" alt="">
+                            <img class="star-product-icon" src="/assets/star.png" alt="">
                             <p>R$ 350,00</p>
                         </div>
                     </div>
@@ -191,6 +201,8 @@
         </div>
     </div>
 
-    <script src="./script.js"></script>
+    <form action="/delete" method="post">
+    </form>
+
 </body>
 </html>
