@@ -1,7 +1,14 @@
 const DataBase = require('../models/DataModel')
 
 module.exports = {
+    index(req,res){
+        const data = DataBase.get()
+
+        return res.render('index', { data })
+    },
     save(req,res){
+        const data = DataBase.get()
+
         DataBase.set({
             name: req.body.name,
             price: req.body.price,
@@ -9,12 +16,7 @@ module.exports = {
             amount: req.body.amount
         });
 
-        return res.redirect("/")
-    },
-    show(req,res){
-        const data = DataBase.get()
-
-        return res.render('index', { data })
+        return res.render("index", { data })
     },
     update(req,res){
         const id = req.params.id
@@ -29,8 +31,9 @@ module.exports = {
         return res.rend("/")
     },
     delete(req,res){
+        const data = DataBase.get()
         DataBase.delete(req.params.id)
 
-        return res.redirect("/")
+        return res.render("index", { data })
     }
 }

@@ -412,3 +412,7 @@ div#orange{
     margin: 0 1%;
 }
 
+button#button-delete-register{
+    border: none;
+    background-color: var(--white);
+}

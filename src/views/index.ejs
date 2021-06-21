@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/public/style.css">
+    
+    <link rel="stylesheet" href="/styles/style.css">
     
 </head>
 <body>
@@ -140,7 +141,7 @@
                                    <td><%= data.price %></td>
                                    <td><%= data.quantities %></td>
                                    <td><%= data.amount %></td>
-                                   <td><button form="form-delete"><img src="/assets/remove-document.png" alt="" id="image-remove"></button></td>
+                                   <td><button form="form-delete" id="button-delete-register"><img src="/assets/remove-document.png" alt="" id="image-remove"></button></td>
                                </tr>                   
                            <%});  %> 
                         </tbody>
@@ -201,8 +202,9 @@
         </div>
     </div>
 
-    <form action="/delete" method="post">
+    <form action="/delete" method="post" id="form-delete">
     </form>
 
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
